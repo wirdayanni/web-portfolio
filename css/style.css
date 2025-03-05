@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --mainColor: #2C2C2C;
+    --secondColor: #E4E4E4;
+    --buttonColor: #A8DADC;
+    --shadowColor: #65E5EA;
+    --textColor: white;
+}
+
+body{
+    background-color: var(--mainColor);
+    min-height: 900px;
+    font-family: 'Raleway', sans-serif;
+    color: var(--textColor);
+}
+
+nav.navbar-container {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    background-color: black;
+    justify-content: flex-end;
+    padding-right: 8rem;
+}
+
+nav.navbar-container .navbar-list {
+    display: flex;
+    justify-content: right;
+    padding: 1.5rem 1rem .5rem 0;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav.navbar-container .navbar-list li a {
+    text-decoration: none;
+    color: var(--textColor);
+    border-radius: 999px;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.2 ease-in-out;
+}
+
+nav.navbar-container .navbar-list li a:hover {
+    background-color: var(--buttonColor);
+    color: var(--mainColor);
+}
+
+.burger {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+}
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    margin: 7px;
+    transition: all 0.3s;
+    /* z-index: 99; */
+}
+
+main {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 2rem;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+main .hero {
+    display: flex;
+    align-items: center;
+    height: 650px;
+    gap: 50px;
+    padding-top: 100px;
+}
+main .hero .hero-right img,
+main .about .about-left img {
+    height: 250px;
+}
+
+main .about,
+main .skills,
+main .project,
+main .contact {
+    display: flex;
+    align-items: center;
+    margin: 50px;
+    gap: 10px;
+    flex-direction: column;
+}
+
+main .about .about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin: 50px;
+}
+
+main .skills .skills-container {
+    display: flex;
+    align-items: center;
+    margin: 50px;
+    height: 350px;
+    gap: 25px;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+main .skills .skills-container .skill-box {
+    display: flex;
+    width: 240px;
+    height: auto;
+    gap: 10px;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+main .skills .skills-container .skill-box .logo img{
+    width: 50px;
+    height: 50px;
+}
+
+main .skills .skills-container .skill-box .content p {
+    margin: 0;
+}
+
+main .project .project-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem 1rem;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+main .project .project-container img{
+    width: 300px;
+    border-radius: 3%;
+}
+
+main .project .project-container .project-box {
+    display: flex;
+    width: 25%;
+    row-gap: 10px;
+    padding: 5px;
+    border: 1px solid white;
+    border-style: none;
+    flex-direction: column;
+}
+
+main .project .project-container .button{
+    width: 50%;
+    padding: .6rem;
+    background-color: var(--buttonColor);
+    border: 1px solid var(--shadowColor);
+    border-radius: 8px;
+}
+
+main .contact .contact-container {
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 480px;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+main .contact .contact-container .contact-form {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    gap: 1rem;
+    flex-flow: column wrap;
+}
+
+main .contact .contact-container .contact-form input,
+main .contact .contact-container .contact-form textarea {
+    width: 500px;
+    padding: 0.5rem 1rem;
+    background-color: var(--textColor);
+    border: 2px solid var(--buttonColor);
+    border-radius: 5px;
+    resize: none;
+}
+
+main .contact .contact-container .contact-form button {
+    width: 300px;
+    padding: .6rem;
+    background-color: var(--buttonColor);
+    border: 1px solid var(--shadowColor);
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 1200px){
+    .navbar-container{
+        width: 90%;
+    }
+}
